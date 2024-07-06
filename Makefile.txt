@@ -1,0 +1,25 @@
+# Makefile
+
+CC = gcc
+CFLAGS = -Wall -Wextra -pedantic
+AR = ar
+ARFLAGS = rcs
+
+LIBRARY = libgaussian.a
+HEADER = gaussian_dist.h
+SOURCE = gaussian_dist.c
+MAIN = main.c
+
+all: $(LIBRARY) main
+
+$(LIBRARY): $(SOURCE)
+	$(CC) $(CFLAGS) -c $(SOURCE)
+	$(AR) $(ARFLAGS) $(LIBRARY) gaussian_dist.o
+
+main: $(MAIN) $(LIBRARY)
+	$(CC) $(CFLAGS) -o main $(MAIN) -L. -lgaussian
+
+clean:
+	rm -f *.o $(LIBRARY) main
+
+.PHONY: all clean

@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1720258914 source:c:\users\jacqu\onedrive\bureau\informatik\pp10 prog2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"gaussian_dist.h"
+	<getopt.h>
+
+1720260463 c:\users\jacqu\onedrive\bureau\informatik\pp10 prog2\gaussian_dist.h
+	<stdio.h>
+
